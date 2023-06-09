@@ -1,2 +1,2 @@
-class Api::V1::Greeting < ApplicationRecord
+class Greeting < ApplicationRecord
 end
