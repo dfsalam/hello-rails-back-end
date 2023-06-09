@@ -1,10 +1,11 @@
 class Api::V1::GreetingsController < ApplicationController
-  before_action :set_api_v1_greeting, only: %i[ show update destroy ]
+  before_action :set_api_v1_greeting, only: %i[show update destroy]
 
   # GET /api/v1/greetings
   def index
-    @api_v1_greetings = Api::V1::Greeting.all
+    @greetings = Greeting.all
+    @greeting = @greetings.sample
 
-    render json: @api_v1_greetings
+    render json: @greeting
   end
 end
